@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="images/favicons/site.webmanifest">
+        <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="description" content="Website development and design">
+        <meta name="google" content="notranslate" />
+        <title>webBox</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <svg style="display: none">
+            <symbol id="facebook" viewBox="0 0 310 310">
+                <g>
+                    <path d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                    c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                    V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                    C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                    c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
+                </g>
+            </symbol>
+            <symbol id="twitter" viewBox="0 0 310 310">
+                <g>
+                    <path d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73
+                    c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783
+                    c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598
+                    C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467
+                    c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977
+                    c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889
+                    c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597
+                    c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961
+                    c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895
+                    c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367
+                    c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998
+                    C307.394,57.037,305.009,56.486,302.973,57.388z"/>
+                </g>
+            </symbol>
+            <symbol id="linkedin" viewBox="0 0 504.4 504.4">
+                <g>
+                    <path d="M377.6,0.2H126.4C56.8,0.2,0,57,0,126.6v251.6c0,69.2,56.8,126,126.4,126H378c69.6,0,126.4-56.8,126.4-126.4V126.6
+                    C504,57,447.2,0.2,377.6,0.2z M168,408.2H96v-208h72V408.2z M131.6,168.2c-20.4,0-36.8-16.4-36.8-36.8c0-20.4,16.4-36.8,36.8-36.8
+                    c20.4,0,36.8,16.4,36.8,36.8C168,151.8,151.6,168.2,131.6,168.2z M408.4,408.2H408h-60V307.4c0-24.4-3.2-55.6-36.4-55.6
+                    c-34,0-39.6,26.4-39.6,54v102.4h-60v-208h56v28h1.6c8.8-16,29.2-28.4,61.2-28.4c66,0,77.6,38,77.6,94.4V408.2z"/>
+                </g>
+            </symbol>
+        </svg>
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <h1 class="header__logoText">webBox</h1>
+                    </div>
+                    <nav class="nav" id="nav">
+                        <a class="nav__link" href="#" data-scroll="#features">Features</a>
+                        <a class="nav__link" href="#" data-scroll="#works">Works</a>
+                        <a class="nav__link" href="#" data-scroll="#team">Our Team</a>
+                        <a class="nav__link" href="#" data-scroll="#reviews">Testimonials</a>
+                        <a class="nav__link" href="#" data-scroll="#download">Download</a>
+                    </nav>
+                    <button class="burger" type="button" id="navToggle">
+                        <span class="burger__item">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <h1 class="intro__title">Turn On Tomorrow</h1>
+                    <h2 class="intro__subtitle">Our company will create a website for every taste and for any purpose for you. Quality and speed of execution are the key to our success.</h2>
+                    <a class="btn btn--red" href="#">Find Out More</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="features">
+            <div class="features">
+                <div class="features__item">
+                    <img class="features__icon" src="images/feautures/feature_1.png" alt="feature_1">
+                    <h4 class="features__title">Easily Customised</h4>
+                    <div class="features__text">Convenience and ease of setting up all products. Wide settings for the most demanding users</div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="images/feautures/feature_2.png" alt="feature_2">
+                    <h4 class="features__title">Responsive Ready</h4>
+                    <div class="features__text">Adaptability is one of the best features of our products. Use one website on different screen extensions without losing "beauty"</div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="images/feautures/feature_3.png" alt="feature_3">
+                    <h4 class="features__title">Modern Design</h4>
+                    <div class="features__text">Our designers are among the best in their field. Our works use exclusive and up-to-date design solutions</div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="images/feautures/feature_4.png" alt="feature_4">
+                    <h4 class="features__title">Clean Code</h4>
+                    <div class="features__text">Clean code will provide convenience for making changes to the site and introducing something new</div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="images/feautures/feature_5.png" alt="feature_5">
+                    <h4 class="features__title">Ready to Ship</h4>
+                    <div class="features__text">The final product of our company is always ready for all market and web industry challenges</div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="images/feautures/feature_6.png" alt="feature_6">
+                    <h4 class="features__title">Download for free</h4>
+                    <div class="features__text">On our site you will find many useful and high-quality software products. You can also use our website builder for free for 14 days</div>
+                </div>
+            </div>
+        </div>
+        <div class="works" id="works">
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_1.jpg" alt="work_1">
+                <div class="works__content">
+                    <div class="works__title">School Goods Store</div>
+                    <div class="works__text">Ready Web Resource</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_2.jpg" alt="work_2">
+                <div class="works__content">
+                    <div class="works__title">Décor Goods Store Template</div>
+                    <div class="works__text">User Interface Design</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_3.jpg" alt="work_3">
+                <div class="works__content">
+                    <div class="works__title">Online blog for photographer</div>
+                    <div class="works__text">Ready Web Resource</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_4.jpg" alt="work_4">
+                <div class="works__content">
+                    <div class="works__title">Online blog for cooking</div>
+                    <div class="works__text">Ready Web Resource</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_5.jpg" alt="work_5">
+                <div class="works__content">
+                    <div class="works__title">Shop for fishing goods</div>
+                    <div class="works__text">Ready Web Resource</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_6.jpg" alt="work_6">
+                <div class="works__content">
+                    <div class="works__title">Hardware Stores Template</div>
+                    <div class="works__text">User Interface Design</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_7.jpg" alt="work_7">
+                <div class="works__content">
+                    <div class="works__title">Site of modern architecture</div>
+                    <div class="works__text">Ready Web Resource</div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="images/works/work_8.jpg" alt="work_8">
+                <div class="works__content">
+                    <div class="works__title">Site for the restaurant</div>
+                    <div class="works__text">Ready Web Resource</div>
+                </div>
+            </div>
+        </div>
+        <div class="team" id="team">
+            <div class="container">
+                <div class="team__inner">
+                    <div class="team__item">
+                        <img class="team__photo" src="images/team/team_1.jpg" alt="team_1">
+                        <div class="team__name">Anna Petrenko</div>
+                        <div class="team__prof">GENERAL DIRECTOR</div>
+                        <div class="team__text"><p>A person who has worked for a long time in a company that has 10 years of experience working with websites, a qualified specialist. During her work she was directly involved in the implementation of more than 2,000 projects.</p></div>
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team__item">
+                        <img class="team__photo" src="images/team/team_2.jpg" alt="team_2">
+                        <div class="team__name">Vasyl Petrenko</div>
+                        <div class="team__prof">Co-Founder, Developer</div>
+                        <div class="team__text"><p>Educated specialist, one of the co-founders of the company. He has been working in IT for more than 12 years. During his work he proved himself to be a high-level developer with a lot of good programming skills, and not only in the WEB.</p></div>
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team__item">
+                        <img class="team__photo" src="images/team/team_3.jpg" alt="team_3">
+                        <div class="team__name">Victoria Melnyk</div>
+                        <div class="team__prof">UI Designer</div>
+                        <div class="team__text"><p>A designer with a capital letter, a highly qualified specialist who is able to create a variety of "artistic" solutions. During her time at the company, she has developed more than 100 themes for various websites, which are used by many IT companies around the world.</p></div>
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team__item">
+                        <img class="team__photo" src="images/team/team_4.jpg" alt="team_4">
+                        <div class="team__name">Yulia Ovcharenko</div>
+                        <div class="team__prof">Data Scientist</div>
+                        <div class="team__text"><p>She has held this position in the company for 5 years. Responsible specialist who has been working with data for about 7 years, thanks to her skills in the world work more than 45 web resources. Your data is in safe hands and under powerful protection.</p></div>
+                        <div class="social">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews" id="reviews"І>
+            <div class="container">
+                <div class="reviews__slider" id="reviewsSlider">
+                    <div class="slick-item">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__img" src="images/reviews/review_1.jpg" alt="review_1">
+                            </div>
+                            <div class="reviews__content">
+                                <div class="reviews__text">“webBox is a reliable company that occupies a good place not only among IT companies in Europe, but also...”</div>
+                                <div class="reviews__author">Susan Sims, Interaction Designer at Microsoft</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__img" src="images/reviews/review_2.jpg" alt="review_2">
+                            </div>
+                            <div class="reviews__content">
+                                <div class="reviews__text">“webBox is the best in its field. Feel free to ask for services...”</div>
+                                <div class="reviews__author">John Smith, Developer at Oracle</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__img" src="images/reviews/review_3.jpg" alt="review_3">
+                            </div>
+                            <div class="reviews__content">
+                                <div class="reviews__text">“The quality of webBox products is always at a high level...”</div>
+                                <div class="reviews__author">Jack London, Developer at Apple</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="download" id="download">
+            <div class="container">
+                <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
+                <div class="download__text">
+                    <p>The best web resources are here</p>
+                </div>
+                <a class="btn btn--red btn--long" href="#">Download Here</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <h4 class="footer__title">Location</h4>
+                        <address class="footer__address">
+                            <div>Karpatska Street, 15, Ivano-Frankivsk,</div>
+                            <div>Ivano-Frankivsk Region, 76000</div>
+                        </address>
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__title">Share with Love</h4>
+                        <div class="social social--footer">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__title">About <span class="footer__webBox">webBox</span></h4>
+                        <div class="footer__text">
+                            <p>webBox company with a world name. We have about 5000 projects on our account.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="copyright__text">
+                        <div>Copyright 2021 ActiveBox. All Rights Reserved</div>
+                        <div>Designed <span>by Kamal Chaneman</span></div>
+                        <div>Made <span>by Dmytro Busko</span></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
